@@ -1,0 +1,36 @@
+.menu {
+    width: 406px;
+    height: 1207px;
+    background: white;
+    border-right: 1px solid @violet;    
+    font-size: 18px;
+    font-weight: 400;   
+    text-transform: uppercase; 
+    line-height: 59px;
+}
+
+.menu__logo {
+    width: 144px;
+    height: 125px;
+    margin-top: 50px;
+    margin-left: 120px;
+}
+
+.menu__list {
+    .undone-list();
+    display: inline-block;
+    margin-left: 120px;
+    margin-top: 25px;
+}
+
+.menu__link {
+    color: @grey;
+
+    &:hover {
+        color: @violet;
+    }
+}
+
+.menu__link--active {
+    color: @violet;
+}

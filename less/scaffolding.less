@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik Regular"), url("../fonts/Rubik-Regular.woff2") format("woff2"), url("../fonts/Rubik-Regular.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: local("Rubik Light"), url("../fonts/Rubik-Light.woff2") format("woff2"), url("../fonts/Rubik-Light.woff") format("woff");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 300;
+}
+
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Rubik";
+  color: @black;
+  display: inline-flex;
+  flex-wrap: wrap;
+  background: url(../img/bg.jpg) no-repeat;
+}
+
+@media (min-resolution: 300dpi) {
+  body {
+    background: url(../img/bg@2x.jpg) no-repeat;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1,h2,h3,p {
+  margin: 0;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+h1,h3 {
+  color: @violet;
+}
+
+label {
+  display: inline-block;
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+  color: @black;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.sr-only--show {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  clip: auto;
+  overflow: visible;
+}
