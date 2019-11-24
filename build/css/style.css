@@ -17,12 +17,10 @@ body {
   overflow-x: hidden;
   font-family: "Rubik";
   color: #171717;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   background: url(../img/bg.jpg) no-repeat;
+  display: grid;
+  grid-template-columns: 406px 100%;
+  grid-auto-rows: auto;
 }
 @media (-webkit-min-device-pixel-ratio: 3.125), (min-resolution: 300dpi) {
   body {
@@ -392,6 +390,10 @@ template {
   font-weight: 400;
   text-transform: uppercase;
   line-height: 59px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 2;
 }
 .menu__logo {
   width: 144px;
@@ -409,6 +411,8 @@ template {
 }
 .menu__link {
   color: #999999;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .menu__link:hover {
   color: #400080;
@@ -419,6 +423,11 @@ template {
 .home {
   margin-left: 130px;
   margin-top: 50px;
+  display: inline-block;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 .home__main-title {
   font-size: 44px;
@@ -518,7 +527,7 @@ template {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  margin-top: 50px;
+  margin-top: 30px;
   -webkit-transition: .3s;
   transition: .3s;
   visibility: hidden;
@@ -555,6 +564,9 @@ template {
   right: -25px;
   cursor: pointer;
 }
+.home__update:hover {
+  text-decoration: none;
+}
 .home__checkbox-msa {
   position: absolute;
   visibility: hidden;
@@ -579,6 +591,8 @@ template {
           box-sizing: border-box;
   left: -30px;
   top: -2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .tree {
   margin-top: 35px;
@@ -627,6 +641,8 @@ template {
           box-sizing: border-box;
   left: -30px;
   top: -2px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 .home__algorithms {
   margin-top: 40px;
@@ -658,6 +674,7 @@ template {
           box-sizing: border-box;
   display: inline-block;
   padding-left: 10px;
+  padding-right: 10px;
 }
 .home__e-value-input {
   width: 186px;
@@ -876,8 +893,15 @@ template {
   font-size: 14px;
   font-weight: 400;
   color: white;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 1;
+  grid-column-end: 3;
 }
 .footer__developer {
   color: white;
   text-decoration: underline;
+}
+.footer__developer:hover {
+  text-decoration: none;
 }
