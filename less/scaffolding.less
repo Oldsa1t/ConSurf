@@ -15,68 +15,30 @@
 }
 
 
-body {
+.body {
   width: 100%;
   overflow-x: hidden;
   font-family: "Rubik";
   color: @black;
+  font-weight: 400;
   background: url(../img/bg.jpg) no-repeat;
-  display: grid;
-  grid-template-columns: 406px 100%;
-  grid-auto-rows: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (min-resolution: 300dpi) {
-  body {
+  .body {
     background: url(../img/bg@2x.jpg) no-repeat;
   }
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-h1,h2,h3,p {
-  margin: 0;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-h1,h3 {
-  color: @violet;
-}
-
-label {
+.label {
   display: inline-block;
   font-size: 14px;
 }
 
-a {
+.link {
   text-decoration: none;
   color: @black;
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-
-.sr-only--show {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  padding: 0;
-  clip: auto;
-  overflow: visible;
 }

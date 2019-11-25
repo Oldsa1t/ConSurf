@@ -1,0 +1,88 @@
+.checkbox, .radio {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropdown__select {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+}
+
+.dropdown__label {
+    width: 175px;
+    height: 35px;
+    border: 1px solid @grey;
+    border-radius: 4px;
+    line-height: 35px;
+    padding-left: 12px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        content: "";
+        width: 14px;
+        height: 10px;
+        position: absolute;
+        background: url(../../img/arrow.svg) no-repeat;
+        right: 16px;
+        top: 12px;
+        transition: 0.3s;
+        
+    }
+}
+
+.dropdown__label--active::after {
+    content: "";
+        width: 14px;
+        height: 10px;
+        position: absolute;
+        background: url(../../img/arrow.svg) no-repeat;
+        right: 16px;
+        top: 12px;
+        transform: rotate(180deg);
+}
+
+.dropdown__list {
+    width: 175px;
+    height: 148px;
+    background: white;
+    border: 1px solid @grey;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    margin-top: 30px;
+    transition: .3s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown__option {
+    height: 32px;
+    line-height: 32px;
+    padding-left: 12px;
+    display: block;
+
+    &:hover {
+        background: #E0D9E7;
+    }
+}
+
+.dropdown__list--opened {
+    visibility: visible;
+    opacity: 1;
+    margin-top: 5px;
+    z-index: 10;
+}

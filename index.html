@@ -6,288 +6,292 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <title>Home</title>
+    <title>main</title>
 </head>
 
-<body>
+<body class="body">
 
-    <aside class="menu">
-        <a href="#">
-            <img class="menu__logo logo" src="img/Logo.png" srcset="img/Logo@2x.png" alt="Logo">
-        </a>
-        <ul class="menu__list">
-            <li class="menu__item">
-                <a class="menu__link menu__link--active" href="#">Home</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">FAQ</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">Gallery</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">Overview</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">Quick help</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">Citing & credits</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">Consurf-DB</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">Terms of use</a>
-            </li>
-            <li class="menu__item">
-                <a class="menu__link" href="">Contact us</a>
-            </li>
-        </ul>
-    </aside>
+    <div class="wrapper">
 
-    <main class="home">
-        <h1 class="home__main-title">The consurf server</h1>
-        <h3 class="home__description">Server for the identification of functional regions in proteins</h3>
-        <form class="home__parameters">
+        <aside class="menu">
+            <a href="#">
+                <img class="menu__logo logo" src="img/Logo.png" srcset="img/Logo@2x.png" alt="Logo">
+            </a>
+            <ul class="menu__list">
+                <li class="menu__item">
+                    <a class="link menu__link menu__link--active" href="#">Home</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">FAQ</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">Gallery</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">Overview</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">Quick help</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">Citing & credits</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">Consurf-DB</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">Terms of use</a>
+                </li>
+                <li class="menu__item">
+                    <a class="link menu__link" href="">Contact us</a>
+                </li>
+            </ul>
+        </aside>
 
-            <h2 class="home__title">Run parameters</h2>
+        <main class="main">
+            <h1 class="title title-h1">The consurf server</h1>
+            <p class="main__description">Server for the identification of functional regions in proteins</p>
+            <form class="main__parameters">
 
-            <div class="home__msa">
-                <h3 class="">Do you have a multiple sequence alignment (MSA) to upload?</h3>
+                <h2 class="main__title title-h2">Run parameters</h2>
 
-                <div class="home__wrapper msa">
-                    Upload MSA file
-                    <div class="home__upload">
-                        <input class="home__upload-input" type="file">
+                <div class="main__msa">
+                    <h3 class="title title-h3">Do you have a multiple sequence alignment (MSA) to upload?</h3>
+
+                    <div class="main__wrapper msa">
+                        Upload MSA file
+                        <div class="main__upload">
+                            <input class="main__upload-input" type="file">
+                        </div>
+                        and indicate the Query Sequence Name
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
+                        </div>
+                        <a class="link main__update" href="">update selection</a>
                     </div>
-                    and indicate the Query Sequence Name
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
+
+                    <div class="main__no-msa">
+                        <input class="main__checkbox-msa checkbox" type="checkbox" id="msa" checked>
+                        <label class="label main__msa-label" for="msa">No, I don't have an MSA</label>
+                    </div>
+                </div>
+
+                <div class="main__wrapper tree">
+                    <h3 class="title title-h3 have-tree">Do you have a Tree to upload?</h3>
+                    <span class="main__upload-tree">Upload your Tree file (in Newick format)</span>
+                    <div class="main__upload">
+                        <input class="main__upload-input" type="file">
+                    </div>
+                    <div class="main__no-tree">
+                        <input class="main__checkbox-tree checkbox" type="checkbox" id="Tree" checked>
+                        <label class="label main__tree-label" for="Tree">No, I don't have a Tree file</label>
+                    </div>
+                </div>
+
+                <div class="main__algorithms">
+                    <h3 class="title title-h3 choose-parameters">Choose parameters to homolog search algorithm</h3>
+
+                    <div class="main__search-algorithm">
+                        <label class="label main__algorithm-label" for="search-algorithm">Homolog search algorithm</label>
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="search-algorithm">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
                         </div>
                     </div>
-                    <a class="home__update" href="">update selection</a>
-                </div>
 
-                <div class="home__no-msa">
-                    <input class="home__checkbox-msa" type="checkbox" id="msa" checked>
-                    <label class="home__msa-label" for="msa">No, I don't have an MSA</label>
-                </div>
-            </div>
-
-            <div class="home__wrapper tree">
-                <h3 class="have-tree">Do you have a Tree to upload?</h3>
-                <span class="home__upload-tree">Upload your Tree file (in Newick format)</span>
-                <div class="home__upload">
-                    <input class="home__upload-input" type="file">
-                </div>
-                <div class="home__no-tree">
-                    <input class="home__checkbox-tree" type="checkbox" id="Tree" checked>
-                    <label class="home__tree-label" for="Tree">No, I don't have a Tree file</label>
-                </div>
-            </div>
-
-            <div class="home__algorithms">
-                <h3 class="choose-parameters">Choose parameters to homolog search algorithm</h3>
-
-                <div class="home__search-algorithm">
-                    <label class="home__algorithm-label" for="search-algorithm">Homolog search algorithm</label>
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="search-algorithm">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
+                    <div class="main__iterations">
+                        <label class="label main__iterations-label" for="iterations">Number of iterations</label>
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="iterations">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div class="home__iterations">
-                    <label class="home__iterations-label" for="iterations">Number of iterations</label>
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="iterations">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
-                        </div>
+                    <div class="main__e-value">
+                        <label class="label main__e-value-label">E-value cutoff</label>
+                        <input class="main__e-value-input input__number" type="text" placeholder="Lorem ipsum">
                     </div>
-                </div>
 
-                <div class="home__e-value">
-                    <label class="home__e-value-label">E-value cutoff</label>
-                    <input class="home__e-value-input input__number" type="text" placeholder="Lorem ipsum">
-                </div>
-
-                <div class="home__protein">
-                    <label class="home__protein-label" for="protein">Protein data base</label>
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="protein">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="home__analyzing">
-                <h3 class="home__homologs">Select homologs for ConSurf analyses</h3>
-                <div class="home__homolog-auto">
-                    <input class="home__radio" type="radio" id="auto" name="homologs" checked>
-                    <label class="home__label-auto" for="auto">Automatically (recommended)</label>
-                </div>
-                <div class="home__homolog-manual">
-                    <input class="home__radio" type="radio" id="manual" name="homologs">
-                    <label class="home__label-manual" for="manual">Manually</label>
-                </div>
-            </div>
-
-            <div class="home__analysis-result">
-                <h3 class="home__algorithm-result">Choose parameters select the sequence for the 
-                    analysis out of homolog search algorithm results</h3>
-                <div class="home__sequence">
-                    Select
-                    <input class="input__number input__sequence" type="text" placeholder="Lorem ipsum">
-                    sequences
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
-                        </div>
-                    </div>
-                    <span class="home__reference">to reference equence</span>
-                    <!-- Наверное sequence имеется ввиду -->
-                </div>
-
-                <div class="home__sequence-parameters">
-                    <div class="home__between-sequences between-sequences">
-                        <label for="">Maximal %ID between sequences</label>
-                        <input class="input__number input__between-sequences" type="text" placeholder="Lorem ipsum">
-                    </div>
-                    <div class="home__homologs-percent homologs-percent">
-                        <label for="">Maximal %ID for homologs</label>
-                        <input class="input__number input__homologs-percent" type="text" placeholder="Lorem ipsum">
-                    </div>
-                </div>
-            </div>
-
-            <div class="home__build-msa">
-                <h3 class="">Choose alignment method to build the Multiple Sequence Alignment (MSA)</h3>
-                <div class="home__alignment-method">
-                    <label class="home__alignment-label" for="alignment-method">Alignment method</label>
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="alignment-method">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="home__calculation">
-                <h3 class="">Choose parameters for evolutionary conservation calculation</h3>
-
-                <div class="home__calculation-method">
-                    <label class="home__calculation-label" for="calculation-method">Calculation method</label>
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="calculation-method">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
+                    <div class="main__protein">
+                        <label class="label main__protein-label" for="protein">Protein data base</label>
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="protein">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="home__substitution-model">
-                    <label class="home__substitution-label" for="substitution-model">Evolutionary substitution model</label>
-                    <div class="home__dropdown dropdown">
-                        <select class="home__select" name="" id="substitution-model">
-                            <option value="1">One</option>
-                            <option value="2">Two</option>
-                            <option value="3">Three</option>
-                            <option value="4">Four</option>
-                        </select>
-                        <div class="home__dropdown-label dropdown__label">Dropdown Button</div>
-                        <div class="home__dropdown-list">
-                            <a class="home__option" href="#" data-value="1">One</a>
-                            <a class="home__option" href="#" data-value="2">Two</a>
-                            <a class="home__option" href="#" data-value="3">Three</a>
-                            <a class="home__option" href="#" data-value="4">Four</a>
+                <div class="main__analyzing">
+                    <h3 class="title title-h3 main__homologs">Select homologs for ConSurf analyses</h3>
+                    <div class="main__homolog-auto">
+                        <input class="radio" type="radio" id="auto" name="homologs" checked>
+                        <label class="label main__label-auto" for="auto">Automatically (recommended)</label>
+                    </div>
+                    <div class="main__homolog-manual">
+                        <input class="radio" type="radio" id="manual" name="homologs">
+                        <label class="label main__label-manual" for="manual">Manually</label>
+                    </div>
+                </div>
+
+                <div class="main__analysis-result">
+                    <h3 class="title title-h3 main__algorithm-result">Choose parameters select the sequence for the
+                        analysis out of homolog search algorithm results</h3>
+                    <div class="main__sequence">
+                        Select
+                        <input class="input__number input__sequence" type="text" placeholder="Lorem ipsum">
+                        sequences
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
+                        </div>
+                        <span class="main__reference">to reference sequence</span>
+                    </div>
+
+                    <div class="main__sequence-parameters">
+                        <div class="main__between-sequences between-sequences">
+                            <label class="label" for="">Maximal %ID between sequences</label>
+                            <input class="input__number input__between-sequences" type="text" placeholder="Lorem ipsum">
+                        </div>
+                        <div class="main__homologs-percent homologs-percent">
+                            <label class="label" for="">Maximal %ID for homologs</label>
+                            <input class="input__number input__homologs-percent" type="text" placeholder="Lorem ipsum">
                         </div>
                     </div>
                 </div>
 
-            </div>
-        </form>
+                <div class="main__build-msa">
+                    <h3 class="title title-h3">Choose alignment method to build the Multiple Sequence Alignment (MSA)</h3>
+                    <div class="main__alignment-method">
+                        <label class="label main__alignment-label" for="alignment-method">Alignment method</label>
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="alignment-method">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <button class="home__button">Submit</button>
+                <div class="main__calculation">
+                    <h3 class="title title-h3">Choose parameters for evolutionary conservation calculation</h3>
+
+                    <div class="main__calculation-method">
+                        <label class="label main__calculation-label" for="calculation-method">Calculation method</label>
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="calculation-method">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="main__substitution-model">
+                        <label class="label main__substitution-label" for="substitution-model">Evolutionary substitution
+                            model</label>
+                        <div class="dropdown">
+                            <select class="dropdown__select" name="" id="substitution-model">
+                                <option value="1">One</option>
+                                <option value="2">Two</option>
+                                <option value="3">Three</option>
+                                <option value="4">Four</option>
+                            </select>
+                            <div class="dropdown__label">Dropdown Button</div>
+                            <div class="dropdown__list">
+                                <a class="link dropdown__option" href="#" data-value="1">One</a>
+                                <a class="link dropdown__option" href="#" data-value="2">Two</a>
+                                <a class="link dropdown__option" href="#" data-value="3">Three</a>
+                                <a class="link dropdown__option" href="#" data-value="4">Four</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+
+            <button class="main__button">Submit</button>
 
 
-    </main>
+        </main>
+
+    </div>
 
     <footer class="footer">
-        <p>©2019 THE CONSURF SERVER | DESIGNED WITH LOVE BY
-            <a class="footer__developer developer" href="#">DUVSHA</a>
+        <p class="text">©2019 THE CONSURF SERVER | DESIGNED WITH LOVE BY
+            <a class="link footer__developer developer" href="#">DUVSHA</a>
         </p>
     </footer>
 
